@@ -8,7 +8,7 @@ public class GenericThreadClass<T> implements Runnable {
 	
 	public GenericThreadClass(T obj, String threadName) {
 		this.obj = obj;
-		t = new Thread(threadName);
+		t = new Thread(this,threadName);
 		t.start();
 	}
 
